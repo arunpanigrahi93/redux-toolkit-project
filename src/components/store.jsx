@@ -1,10 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
-import counterSlice from "./CounterSlice";
-import userSlice from "./userSlice";
+import counterReducer from "./redux/counterSlice";
+import userReducer from "./redux/userSlice";
+import commentReducer from "./redux/commentSlice";
 
 export const store = configureStore({
   reducer: {
-    counter: counterSlice,
-    newSubscriber: userSlice,
+    counter: counterReducer,
+    newSubscriber: userReducer,
+    newComments: commentReducer,
   },
 });

@@ -1,10 +1,10 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import NewUser from "./NewUser";
-import NewComment from "./NewComment";
+import NewComments from "./NewComments";
 import UserForm from "./UserForm";
-import CommentForm from "./commentForm";
+import CommentForm from "./CommentForm";
 import { useDispatch } from "react-redux";
-import { increment } from "./CounterSlice";
+import { increment } from "./redux/CounterSlice";
 
 const PostDisplay = () => {
   const [showUser, setShowUser] = useState(false);
@@ -16,15 +16,13 @@ const PostDisplay = () => {
     dispatch(increment());
   };
 
-  const handleSubscribe = () => {
+  const userHandler = () => {
     setShowUser(true);
-    setShowComment(false);
+  };
+  const commentHandler = () => {
+    setShowComment(true);
   };
 
-  const handleComment = () => {
-    setShowComment(true);
-    setShowUser(false);
-  };
   return (
     <div className="postSection">
       <div className="poster">
@@ -32,8 +30,8 @@ const PostDisplay = () => {
           <img src="assets/Kashmir.jpg" alt="" />
         </div>
         <div className="postButtons">
-          <button onClick={handleSubscribe}>Subscribe</button>
-          <button onClick={handleComment}>Comment</button>
+          <button onClick={userHandler}>Subscribe</button>
+          <button onClick={commentHandler}>Comment</button>
           <button onClick={likeHandler}>Like</button>
         </div>
         <div className="userForm">
@@ -43,7 +41,7 @@ const PostDisplay = () => {
       </div>
       <div className="subSection">
         <NewUser />
-        <NewComment />
+        <NewComments />
       </div>
     </div>
   );
