@@ -16,6 +16,15 @@ const PostDisplay = () => {
     dispatch(increment());
   };
 
+  const handleSubscribe = () => {
+    setShowUser(true);
+    setShowComment(false);
+  };
+
+  const handleComment = () => {
+    setShowComment(true);
+    setShowUser(false);
+  };
   return (
     <div className="postSection">
       <div className="poster">
@@ -23,8 +32,8 @@ const PostDisplay = () => {
           <img src="assets/Kashmir.jpg" alt="" />
         </div>
         <div className="postButtons">
-          <button>Subscribe</button>
-          <button>Comment</button>
+          <button onClick={handleSubscribe}>Subscribe</button>
+          <button onClick={handleComment}>Comment</button>
           <button onClick={likeHandler}>Like</button>
         </div>
         <div className="userForm">
