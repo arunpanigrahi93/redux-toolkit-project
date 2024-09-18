@@ -1,10 +1,18 @@
+import { useState } from "react";
+import NewUser from "./NewUser";
+import NewComment from "./NewComment";
+import UserForm from "./UserForm";
+import CommentForm from "./commentForm";
 import { useDispatch } from "react-redux";
 import { increment } from "./CounterSlice";
 
 const PostDisplay = () => {
+  const [showUser, setShowUser] = useState(false);
+  const [showComment, setShowComment] = useState(false);
+
   const dispatch = useDispatch();
 
-  const likeHndler = () => {
+  const likeHandler = () => {
     dispatch(increment());
   };
 
@@ -17,11 +25,17 @@ const PostDisplay = () => {
         <div className="postButtons">
           <button>Subscribe</button>
           <button>Comment</button>
-          <button onClick={likeHndler}>Like</button>
+          <button onClick={likeHandler}>Like</button>
         </div>
-        <div className="userForm"></div>
+        <div className="userForm">
+          {showUser && <UserForm />}
+          {showComment && <CommentForm />}
+        </div>
       </div>
-      <div className="subSection"></div>
+      <div className="subSection">
+        <NewUser />
+        <NewComment />
+      </div>
     </div>
   );
 };
