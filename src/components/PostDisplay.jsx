@@ -42,8 +42,8 @@ const PostDisplay = () => {
         </div>
       </div>
       <div className="subSection">
-        <NewUser />
-        <NewComments />
+        <NewUser className="NewUser" />
+        <NewComments className="NewComments" />
       </div>
     </div>
   );
