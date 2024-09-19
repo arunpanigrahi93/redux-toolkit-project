@@ -13,8 +13,10 @@ const UserForm = () => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    dispatch(addUsers(userName));
-    setUserName("");
+    if (userName !== "") {
+      dispatch(addUsers(userName));
+      setUserName("");
+    } else alert("Please enter a valid user name");
   };
 
   return (
