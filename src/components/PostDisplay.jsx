@@ -18,9 +18,11 @@ const PostDisplay = () => {
 
   const userHandler = () => {
     setShowUser(true);
+    setShowComment(false);
   };
   const commentHandler = () => {
     setShowComment(true);
+    setShowUser(false);
   };
 
   return (
