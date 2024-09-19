@@ -18,34 +18,68 @@
 }
 
 .postSection {
-    display: flex;
-    justify-content: space-between;
-    border: 1px solid gray;
-}
-
-.poster {
-    width: 80vw;
-    height: 50vh;
+    width: 80%;
+    max-width: 800px;
+    margin: 20px auto;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+  
+  .poster {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    position: absolute;
-    top: 150px;
-}
-
-.subSection {
-    border-left: 1px solid gray;
-    width: 20vw;
-    height: 85vh;
-    position: absolute;
-    right: 0;
-}
-
-.userSection {
-    border: 1px solid gray;
-    height: 33%;
-}
+    padding: 20px;
+  }
+  
+  .postImage img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    max-height: 400px; /* Prevent images from being too tall */
+  }
+  
+  .postButtons {
+    margin: 15px 0;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+  
+  .postButtons button {
+    background-color: #007BFF; /* Bootstrap primary color */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .postButtons button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+  }
+  
+  .userForm {
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .subSection {
+    margin-top: 30px;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    text-align: center;
+  }
+  
+  .subSection h3 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    color: #333;
+  }
 
 .commentSection {
     border: 1px solid gray;
@@ -57,20 +91,7 @@
     height: 33%;
 }
 
-.postButtons {
-    margin: 20px;
-}
-
-.postButtons button {
-    margin: 20px;
-    padding: 10px 20px;
-    cursor: pointer;
-}
-
-.postButtons button:hover {
-    background-color: rgb(21, 119, 119);
-    color: white;
-}
+.
 
 .userForm {
     width: 100%;
