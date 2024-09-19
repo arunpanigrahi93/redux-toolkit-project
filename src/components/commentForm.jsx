@@ -14,8 +14,10 @@ const CommentForm = () => {
   const submitHandler = (e) => {
     e.preventDefault();
     console.log("New Comments: ", userComment);
-    dispatch(addComments(userComment));
-    setUserComment("");
+    {
+      addComments !== "" && dispatch(addComments(userComment));
+      setUserComment("");
+    }
   };
 
   return (
