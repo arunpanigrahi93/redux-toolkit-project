@@ -15,7 +15,7 @@
     font-size: 1.4rem;
     padding: 0 100px 0 20px;
     border-bottom: 1px solid gray;
-    background-color: lightskyblue;
+    background-color: rgb(184, 206, 186);
 }
 
 .postSection {
@@ -51,7 +51,7 @@
   }
   
   .postButtons button {
-    background-color: #007BFF; /* Bootstrap primary color */
+    background-color: #046812; /* Bootstrap primary color */
     border: none;
     color: white;
     padding: 10px 20px;
@@ -61,7 +61,7 @@
   }
   
   .postButtons button:hover {
-    background-color: #0056b3; /* Darker shade on hover */
+    background-color: #2b7643; /* Darker shade on hover */
   }
   
   .userForm {
