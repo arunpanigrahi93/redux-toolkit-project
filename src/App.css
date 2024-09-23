@@ -15,7 +15,7 @@
     font-size: 1.4rem;
     padding: 0 100px 0 20px;
     border-bottom: 1px solid gray;
-    background-color: rgb(184, 206, 186);
+    background-color: #76c0c0;
 }
 
 .postSection {
@@ -112,14 +112,14 @@
 .formSection button {
     margin-left: 10px;
     padding: 8px 20px;
-    background-color: green;
+    background-color: rgb(87, 130, 87);
     color: white;
     border: 1px solid gray;
     border-radius: 5px;
     cursor: pointer;
 }
 .footer {
-  background-color: #54963d; 
+  background-color: #1c9292; 
   color: white;         
   text-align: center;   
   padding: 10px 0;       
